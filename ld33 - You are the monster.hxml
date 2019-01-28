@@ -1,0 +1,9 @@
+-cp src
+-swf swf/client.swf
+-swf-header 1280:800:30:FFFFFF
+-swf-lib "obj\ld33 - You are the monsterResources.swf"
+--flash-strict
+-swf-version 11.3
+-main Main
+-D standalone
+-D spriteParticles
