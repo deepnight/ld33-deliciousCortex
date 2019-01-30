@@ -1,9 +1,5 @@
-import mt.deepnight.Buffer;
-
 class Main extends mt.Process { //}
 	public static var ME : Main;
-
-	public var buffer		: Buffer;
 
 	static function main() {
 		Assets.init();
@@ -18,10 +14,7 @@ class Main extends mt.Process { //}
 		super();
 
 		ME = this;
-
-		buffer = new Buffer(320,240, Const.UPSCALE, false, 0x0);
-		flash.Lib.current.addChild(buffer.render);
-		buffer.drawQuality = flash.display.StageQuality.LOW;
+		createRoot(Boot.ME.s2d);
 
 		#if debug
 		new Game();
@@ -31,11 +24,6 @@ class Main extends mt.Process { //}
 		#end
 
 		onResize();
-
-		#if debug
-		var e = new mt.flash.Stats();
-		flash.Lib.current.addChild(e);
-		#end
 	}
 
 	override function onResize() {
@@ -43,19 +31,18 @@ class Main extends mt.Process { //}
 		Const.UPSCALE = Std.int( flash.Lib.current.stage.stageWidth/320 );
 		if( Const.FORCED_UPSCALE>0 )
 			Const.UPSCALE = Const.FORCED_UPSCALE;
-		buffer.setScale( Const.UPSCALE );
-		buffer.setTexture( Buffer.makeMosaic2(Const.UPSCALE), 0.5, true );
+		root.setScale( Const.UPSCALE );
+		// buffer.setTexture( Buffer.makeMosaic2(Const.UPSCALE), 0.5, true );
 	}
 
-	override function update(dt) {
-		super.update(dt);
-		buffer.update();
+	override function update() {
+		super.update();
 	}
 
 	static function mainLoop(_) {
-		Assets.music.updateBeatCounter();
-		mt.flash.Key.update();
-		mt.Process.updateAll(1);
+		// Assets.music.updateBeatCounter();
+		// mt.flash.Key.update();
+		// mt.Process.updateAll(1);
 	}
 
 }

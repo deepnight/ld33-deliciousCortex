@@ -1,0 +1,5 @@
+base.hxml
+-lib hlsdl
+-D windowSize=1280x800
+-hl bin/client.hl
+# -lib stb_ogg_sound
