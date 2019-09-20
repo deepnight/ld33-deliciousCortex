@@ -2,7 +2,7 @@ package ui;
 import mt.MLib;
 import en.*;
 
-class Say extends FlashProcess {
+class Say extends dn.Process {
 	public static var CURRENT : Say;
 	public function new(e:Entity, str:String) {
 		if( CURRENT!=null )

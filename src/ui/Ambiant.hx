@@ -2,7 +2,7 @@ package ui;
 
 import en.*;
 
-class Ambiant extends FlashProcess {
+class Ambiant extends dn.Process {
 	public static var ALL : Array<Ambiant> = [];
 	public function new(e:Entity, str:String) {
 		ALL.push(this);

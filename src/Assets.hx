@@ -1,8 +1,5 @@
-import mt.deepnight.slb.*;
-import mt.deepnight.slb.assets.TexturePacker;
-import mt.flash.Sfx;
-import mt.MLib;
-import mt.flash.Sfx;
+import dn.heaps.slib.assets.TexturePacker;
+import dn.heaps.Sfx;
 
 class Assets {
 	public static var tiles		: BLib;

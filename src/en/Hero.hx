@@ -1,12 +1,5 @@
 package en;
 
-import mt.deepnight.Lib;
-import mt.deepnight.Tweenie;
-import mt.deepnight.slb.*;
-import mt.MLib;
-
-import mt.flash.Key;
-
 class Hero extends Zombie {
 	public var linking		: Bool;
 	var range				: flash.display.Sprite;

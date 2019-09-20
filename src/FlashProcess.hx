@@ -1,5 +1,5 @@
 import flash.display.Sprite;
-class FlashProcess extends mt.Process {
+class FlashProcess extends dn.Process {
 	public static var DEFAULT_PARENT : Sprite = flash.Lib.current;
 
 	public var root			: Sprite;

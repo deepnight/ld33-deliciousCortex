@@ -1,8 +1,6 @@
 package ui;
 
-import mt.deepnight.Tweenie;
-
-class Arrow extends FlashProcess {
+class Arrow extends dn.Process {
 	public static var CURRENT : Arrow;
 
 	var spr 		: mt.deepnight.slb.BSprite;

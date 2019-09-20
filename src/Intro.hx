@@ -1,10 +1,4 @@
-import mt.deepnight.Buffer;
-import mt.deepnight.slb.*;
-import mt.MLib;
-import mt.flash.Key;
-import flash.display.Bitmap;
-
-class Intro extends FlashProcess {
+class Intro extends dn.Process {
 
 	public var buffer(get,never)	: Buffer; inline function get_buffer() return Main.ME.buffer;
 	var logo		: BSprite;

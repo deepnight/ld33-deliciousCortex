@@ -1,14 +1,9 @@
-import mt.deepnight.Buffer;
-import mt.deepnight.slb.*;
-import mt.MLib;
-import mt.flash.Key;
-
-class Game extends FlashProcess { //}
+class Game extends dn.Process { //}
 	public static var ME : Game;
 
-	public var buffer(get,never)	: Buffer; inline function get_buffer() return Main.ME.buffer;
+	public var buffer(get,never)	: h2d.Object;
 	public var fx					: Fx;
-	public var scroller				: flash.display.Sprite;
+	public var scroller				: h2d.Layers;
 	public var sdm					: mt.flash.DepthManager;
 	public var level				: Level;
 	public var hero					: en.Hero;
@@ -25,6 +20,9 @@ class Game extends FlashProcess { //}
 		super();
 		ME = this;
 		flags = new Map();
+
+		createRoot(Main.ME.root);
+		buffer = new h2d.Object(root);
 
 		scroller = new flash.display.Sprite();
 		buffer.dm.add(scroller, Const.DP_BG);

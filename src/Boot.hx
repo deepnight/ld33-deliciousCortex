@@ -18,7 +18,7 @@ class Boot extends hxd.App {
 
 	override function onResize() {
 		super.onResize();
-		mt.Process.resizeAll();
+		dn.Process.resizeAll();
 	}
 
 	override function update(dt:Float) {
@@ -29,7 +29,7 @@ class Boot extends hxd.App {
 		#else
 		var mul = 1.0;
 		#end
-		mt.Process.updateAll(hxd.Timer.tmod * mul);
+		dn.Process.updateAll(hxd.Timer.tmod * mul);
 	}
 }
 

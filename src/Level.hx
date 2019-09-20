@@ -1,15 +1,7 @@
-import mt.deepnight.Lib;
-import mt.deepnight.slb.*;
-import mt.deepnight.Color;
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-import flash.display.BlendMode;
-import mt.MLib;
+import dn.PathFinder;
+import dn.Bresenham;
 
-import mt.deepnight.PathFinder;
-import mt.deepnight.Bresenham;
-
-class Level extends mt.Process {
+class Level extends dn.Process {
 	public var lid		: Int;
 	public var grid		: Array<Array<{ hard:Bool, soft:Bool, stone:Bool }>>;
 	public var wid		: Int;

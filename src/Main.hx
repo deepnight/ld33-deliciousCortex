@@ -1,4 +1,4 @@
-class Main extends mt.Process { //}
+class Main extends dn.Process { //}
 	public static var ME : Main;
 
 	static function main() {
@@ -42,7 +42,7 @@ class Main extends mt.Process { //}
 	static function mainLoop(_) {
 		// Assets.music.updateBeatCounter();
 		// mt.flash.Key.update();
-		// mt.Process.updateAll(1);
+		// dn.Process.updateAll(1);
 	}
 
 }

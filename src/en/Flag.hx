@@ -1,11 +1,5 @@
 package en;
 
-import mt.deepnight.Lib;
-import mt.deepnight.slb.*;
-import mt.MLib;
-
-import mt.flash.Key;
-
 class Flag extends Entity {
 	public function new() {
 		super(4,4);

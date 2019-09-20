@@ -1,9 +1,6 @@
 package ui;
-import mt.MLib;
-import mt.deepnight.slb.*;
-import mt.deepnight.Tweenie;
 
-class Title extends FlashProcess {
+class Title extends dn.Process {
 	var bg			: BSprite;
 	public function new(str:String) {
 		super(Game.ME);

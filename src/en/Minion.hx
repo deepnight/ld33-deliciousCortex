@@ -1,12 +1,5 @@
 package en;
 
-import mt.deepnight.Lib;
-import mt.deepnight.Color;
-import mt.deepnight.slb.*;
-import mt.MLib;
-
-import mt.flash.Key;
-
 class Minion extends Zombie {
 	public static var ALL : Array<Minion> = [];
 	public var linked		: Bool;

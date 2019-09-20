@@ -1,9 +1,5 @@
 package en;
 
-import mt.deepnight.Lib;
-import mt.deepnight.slb.*;
-import mt.MLib;
-
 class Stander extends Human {
 	public function new(x,y) {
 		super(x,y);

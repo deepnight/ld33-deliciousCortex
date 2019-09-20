@@ -1,11 +1,6 @@
 package ui;
-import mt.MLib;
-import mt.deepnight.slb.*;
-import mt.deepnight.Tweenie;
-import flash.display.Bitmap;
-import flash.display.BitmapData;
 
-class Status extends FlashProcess {
+class Status extends dn.Process {
 	public static var CURRENT : Status;
 	var bar				: Bitmap;
 	public function new() {

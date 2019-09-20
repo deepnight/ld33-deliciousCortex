@@ -1,11 +1,5 @@
 package en;
 
-import mt.deepnight.Lib;
-import mt.deepnight.slb.*;
-import mt.MLib;
-
-import mt.flash.Key;
-
 class Human extends Entity {
 	public static var ALL : Array<Human> = [];
 

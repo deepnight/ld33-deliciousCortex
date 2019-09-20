@@ -1,24 +1,15 @@
-import flash.display.BlendMode;
-import flash.display.Sprite;
-import flash.display.Bitmap;
-import flash.display.BitmapData;
-
-import mt.deepnight.FParticle;
-import mt.deepnight.Lib;
-import mt.deepnight.Color;
-import mt.deepnight.BitmapDataPool;
-import mt.MLib;
+import dn.heaps.HParticle;
 
 import en.*;
 import Const;
 
-class Fx extends mt.Process {
+class Fx extends dn.Process {
 	var wrapper			: flash.display.Sprite;
 	var game(get,never)	: Game; inline function get_game() return Game.ME;
 	var parts			: Array<FParticle>;
 	var bpool			: BitmapDataPool;
 
-	public function new(p:mt.Process, wrapper:flash.display.Sprite) {
+	public function new(p:dn.Process, wrapper:flash.display.Sprite) {
 		super(p);
 		this.wrapper = wrapper;
 

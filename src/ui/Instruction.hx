@@ -1,8 +1,6 @@
 package ui;
 
-import mt.deepnight.Tweenie;
-
-class Instruction extends FlashProcess {
+class Instruction extends dn.Process {
 	public static var CURRENT : Instruction;
 	public function new(str:String) {
 		if( CURRENT!=null )
