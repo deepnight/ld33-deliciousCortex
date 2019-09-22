@@ -90,6 +90,7 @@ class Level extends dn.Process {
 
 
 	function redraw() {
+		// TODO render using TileGroup
 		// Detach
 		if( bmp!=null ) {
 			bmp.bitmapData.dispose();

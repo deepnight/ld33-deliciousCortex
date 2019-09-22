@@ -59,7 +59,7 @@ class Intro extends dn.Process {
 			});
 		}, 3500);
 
-		teint = new flash.display.Bitmap( buffer.createSimilarBitmap(false) );
+		teint = new flash.display.Bitmap( buffer.createSimilarBitmap(false) ); // TODO ColorMatrix filter
 		root.addChild(teint);
 		teint.bitmapData.fillRect(teint.bitmapData.rect, alpha(0x056135));
 		teint.blendMode = OVERLAY;
