@@ -18,7 +18,6 @@ class Main extends dn.Process { //}
 
 		#if debug
 		new Game();
-		//new Demo();
 		#else
 		new Intro();
 		#end

@@ -34,7 +34,7 @@ class Entity {
 	var fx(get,never)			: Fx; inline function get_fx() return Game.ME.fx;
 	var hero(get,never)			: en.Hero; inline function get_hero() return Game.ME.hero;
 	var time(get,never)			: Float; inline function get_time() return Game.ME.time;
-	var pathPreview				: flash.display.Sprite;
+	var pathPreview				: h2d.Object;
 
 	public var shadow			: HSprite;
 	public var zpriority		: Int;
@@ -58,7 +58,7 @@ class Entity {
 		cd = new dn.Cooldown();
 		tw = new dn.Tweenie(Const.FPS);
 
-		pathPreview = new flash.display.Sprite();
+		pathPreview = new h2d.Object();
 		Game.ME.scroller.add(pathPreview, Const.DP_BG);
 		pathPreview.blendMode = ADD;
 		pathPreview.alpha = 0.6;

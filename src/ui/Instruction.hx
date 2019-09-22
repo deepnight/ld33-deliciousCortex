@@ -13,7 +13,7 @@ class Instruction extends dn.Process {
 
 		Game.ME.buffer.add(root, Const.DP_UI);
 
-		var bg = new flash.display.Sprite();
+		var bg = new h2d.Object();
 		root.addChild(bg);
 
 		var tf = Assets.createField(str, 0xFFFFFF, 250);

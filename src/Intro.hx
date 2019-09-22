@@ -17,7 +17,7 @@ class Intro extends dn.Process {
 		logo = Assets.tiles.get("logo");
 		root.addChild(logo);
 
-		var w = new flash.display.Sprite();
+		var w = new h2d.Object();
 		root.addChild(w);
 		w.alpha = 0;
 
@@ -37,10 +37,9 @@ class Intro extends dn.Process {
 		tf.x = buffer.width*0.5 - tf.width*0.5;
 		tf.y = 210;
 
-		mask = new flash.display.Bitmap( buffer.createSimilarBitmap(false) );
+		mask = new h2d.Bitmap( h2d.Tile.fromColor(0x0, 100,100), root);
 		root.addChild(mask);
-		mask.bitmapData.fillRect(mask.bitmapData.rect, alpha(0x0));
-		tw.create(mask.alpha, 1>0, 1500);
+		tw.createS(mask.alpha, 1>0, 1500);
 
 		var tf = Assets.createField("Click to start");
 		root.addChild(tf);

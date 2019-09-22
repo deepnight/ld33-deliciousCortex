@@ -4,12 +4,12 @@ import en.*;
 import Const;
 
 class Fx extends dn.Process {
-	var wrapper			: flash.display.Sprite;
+	var wrapper			: h2d.Object;
 	var game(get,never)	: Game; inline function get_game() return Game.ME;
 	var parts			: Array<FParticle>;
 	var bpool			: BitmapDataPool;
 
-	public function new(p:dn.Process, wrapper:flash.display.Sprite) {
+	public function new(p:dn.Process, wrapper:h2d.Object) {
 		super(p);
 		this.wrapper = wrapper;
 

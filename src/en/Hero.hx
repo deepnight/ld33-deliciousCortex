@@ -2,7 +2,7 @@ package en;
 
 class Hero extends Zombie {
 	public var linking		: Bool;
-	var range				: flash.display.Sprite;
+	var range				: h2d.Object;
 	var hitFeedback			: HSprite;
 
 	public function new(x,y) {
@@ -21,7 +21,7 @@ class Hero extends Zombie {
 		hitFeedback.visible = false;
 		Game.ME.buffer.add(hitFeedback, Const.DP_UI);
 
-		range = new flash.display.Sprite();
+		range = new h2d.Object();
 		Game.ME.scroller.add(range, Const.DP_BG);
 		range.graphics.lineStyle(1,0x80FF00,1);
 		range.graphics.drawCircle(0,0, Const.COMMAND_RANGE-Const.GRID*0.8);

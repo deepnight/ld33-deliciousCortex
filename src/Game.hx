@@ -13,7 +13,7 @@ class Game extends dn.Process { //}
 
 	public var viewport				: { tx:Null<Float>, ty:Null<Float>, x:Float, y:Float, dx:Float, dy:Float };
 
-	public var mask					: flash.display.Bitmap;
+	public var mask					: h2d.Bitmap;
 
 	public function new() {
 		super();
@@ -39,9 +39,8 @@ class Game extends dn.Process { //}
 		dark.height = buffer.height;
 		dark.alpha = 0.9;
 
-		mask = new flash.display.Bitmap( buffer.createSimilarBitmap(false) );
+		mask = new h2d.Bitmap( h2d.Tile.fromColor(0x0d0000) );
 		buffer.add(mask, Const.DP_TOP);
-		mask.bitmapData.fillRect(mask.bitmapData.rect, alpha(0x0d0000));
 
 		new ui.Status();
 
