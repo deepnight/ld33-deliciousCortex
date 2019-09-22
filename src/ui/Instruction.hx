@@ -11,7 +11,7 @@ class Instruction extends dn.Process {
 
 		var col = 0x1A1830;
 
-		Game.ME.buffer.dm.add(root, Const.DP_UI);
+		Game.ME.buffer.add(root, Const.DP_UI);
 
 		var bg = new flash.display.Sprite();
 		root.addChild(bg);

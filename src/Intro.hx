@@ -1,7 +1,7 @@
 class Intro extends dn.Process {
 
 	public var buffer(get,never)	: Buffer; inline function get_buffer() return Main.ME.buffer;
-	var logo		: BSprite;
+	var logo		: HSprite;
 	var mask		: Bitmap;
 	var teint		: Bitmap;
 	var ready		: Bool;

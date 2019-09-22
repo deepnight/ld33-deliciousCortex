@@ -19,7 +19,7 @@ class Say extends dn.Process {
 		if( e.is(Hero) ) Assets.SBANK.say01(1);
 		if( e.is(Human) ) Assets.SBANK.say02(1);
 
-		Game.ME.sdm.add(root, Const.DP_UI);
+		Game.ME.scroller.add(root, Const.DP_UI);
 
 		var bg = new flash.display.Sprite();
 		root.addChild(bg);

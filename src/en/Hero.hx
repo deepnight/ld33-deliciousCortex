@@ -3,7 +3,7 @@ package en;
 class Hero extends Zombie {
 	public var linking		: Bool;
 	var range				: flash.display.Sprite;
-	var hitFeedback			: BSprite;
+	var hitFeedback			: HSprite;
 
 	public function new(x,y) {
 		super(x,y);
@@ -19,10 +19,10 @@ class Hero extends Zombie {
 		hitFeedback = Assets.tiles.get("hit");
 		hitFeedback.setSize(Game.ME.buffer.width, Game.ME.buffer.height);
 		hitFeedback.visible = false;
-		Game.ME.buffer.dm.add(hitFeedback, Const.DP_UI);
+		Game.ME.buffer.add(hitFeedback, Const.DP_UI);
 
 		range = new flash.display.Sprite();
-		Game.ME.sdm.add(range, Const.DP_BG);
+		Game.ME.scroller.add(range, Const.DP_BG);
 		range.graphics.lineStyle(1,0x80FF00,1);
 		range.graphics.drawCircle(0,0, Const.COMMAND_RANGE-Const.GRID*0.8);
 		//range.blendMode = ADD;

@@ -7,7 +7,7 @@ class Status extends dn.Process {
 		CURRENT = this;
 		super(Game.ME);
 
-		Game.ME.buffer.dm.add(root, Const.DP_UI);
+		Game.ME.buffer.add(root, Const.DP_UI);
 
 		bar = new flash.display.Bitmap( new flash.display.BitmapData(40,3,true,0x0) );
 		root.addChild(bar);

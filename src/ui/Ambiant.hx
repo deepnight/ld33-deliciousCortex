@@ -14,7 +14,7 @@ class Ambiant extends dn.Process {
 			e.is(en.Minion) ? 0x63A642 :
 			0xEC2025;
 
-		Game.ME.sdm.add(root, Const.DP_UI);
+		Game.ME.scroller.add(root, Const.DP_UI);
 
 		var tf = Assets.createField(str, col, 120);
 		root.addChild(tf);

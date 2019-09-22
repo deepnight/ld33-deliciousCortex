@@ -1,15 +1,14 @@
 class Game extends dn.Process { //}
 	public static var ME : Game;
 
-	public var buffer(get,never)	: h2d.Object;
-	public var fx					: Fx;
+	public var buffer(get,never)	: h2d.Layers;
 	public var scroller				: h2d.Layers;
-	public var sdm					: mt.flash.DepthManager;
+	public var fx					: Fx;
 	public var level				: Level;
 	public var hero					: en.Hero;
 	public var flag					: en.Flag;
-	public var cm					: mt.deepnight.Cinematic;
-	var dark						: BSprite;
+	public var cm					: dn.Cinematic;
+	var dark						: HSprite;
 	public var flags				: Map<String,Bool>;
 
 	public var viewport				: { tx:Null<Float>, ty:Null<Float>, x:Float, y:Float, dx:Float, dy:Float };
@@ -24,25 +23,24 @@ class Game extends dn.Process { //}
 		createRoot(Main.ME.root);
 		buffer = new h2d.Object(root);
 
-		scroller = new flash.display.Sprite();
-		buffer.dm.add(scroller, Const.DP_BG);
-		sdm = new mt.flash.DepthManager(scroller);
+		scroller = new h2d.Layers();
+		buffer.add(scroller, Const.DP_BG);
 
-		cm = new mt.deepnight.Cinematic(Const.FPS);
+		cm = new dn.Cinematic(Const.FPS);
 
-		var w = new flash.display.Sprite();
-		sdm.add(w, Const.DP_FX);
+		var w = new h2d.Object();
+		scroller.add(w, Const.DP_FX);
 		fx = new Fx(this,w);
 		viewport = { tx:null, ty:null, x:0, y:0, dx:0, dy:0 }
 
 		dark = Assets.tiles.get("dark");
-		buffer.dm.add(dark, Const.DP_FX);
+		buffer.add(dark, Const.DP_FX);
 		dark.width = buffer.width;
 		dark.height = buffer.height;
 		dark.alpha = 0.9;
 
 		mask = new flash.display.Bitmap( buffer.createSimilarBitmap(false) );
-		buffer.dm.add(mask, Const.DP_TOP);
+		buffer.add(mask, Const.DP_TOP);
 		mask.bitmapData.fillRect(mask.bitmapData.rect, alpha(0x0d0000));
 
 		new ui.Status();

@@ -8,7 +8,7 @@ class Level extends dn.Process {
 	public var hei		: Int;
 
 	var bmp				: Bitmap;
-	var sprites			: Array<BSprite>;
+	var sprites			: Array<HSprite>;
 	var pf				: PathFinder;
 	var spots			: Map<String, Array<{cx:Int, cy:Int}>>;
 	var stamps			: Map<String, Array<BitmapData>>;
@@ -189,7 +189,7 @@ class Level extends dn.Process {
 			gbd.draw(r, m, new flash.geom.ColorTransform(1,1,1,0.5), BlendMode.OVERLAY);
 
 			var s = Assets.tiles.get("torch", 0.5,0.5);
-			Game.ME.sdm.add(s, Const.DP_BG_SPRITES);
+			Game.ME.scroller.add(s, Const.DP_BG_SPRITES);
 			s.setPos(x,y-7);
 			s.a.playAndLoop("torch");
 			s.a.unsync();
@@ -201,7 +201,7 @@ class Level extends dn.Process {
 
 		// Final
 		bmp = new flash.display.Bitmap(gbd);
-		Game.ME.sdm.add(bmp, Const.DP_BG);
+		Game.ME.scroller.add(bmp, Const.DP_BG);
 
 	}
 

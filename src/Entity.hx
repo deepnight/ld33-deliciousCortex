@@ -4,8 +4,8 @@ class Entity {
 	public static var GC : Array<Entity> = [];
 	public static var ALL : Array<Entity> = [];
 
-	public var cd				: mt.Cooldown;
-	public var tw				: mt.deepnight.Tweenie;
+	public var cd				: dn.Cooldown;
+	public var tw				: dn.Tweenie;
 
 	public var cx				: Int;
 	public var cy				: Int;
@@ -23,7 +23,7 @@ class Entity {
 	public var weight			: Float;
 	public var speed			: Float;
 
-	public var spr				: BSprite;
+	public var spr				: HSprite;
 	public var life				: Int;
 	public var maxLife			: Int;
 
@@ -36,7 +36,7 @@ class Entity {
 	var time(get,never)			: Float; inline function get_time() return Game.ME.time;
 	var pathPreview				: flash.display.Sprite;
 
-	public var shadow			: BSprite;
+	public var shadow			: HSprite;
 	public var zpriority		: Int;
 
 	public function new(x,y) {
@@ -55,26 +55,26 @@ class Entity {
 		initLife(1);
 		//speed*=2;
 
-		cd = new mt.Cooldown();
-		tw = new mt.deepnight.Tweenie(Const.FPS);
+		cd = new dn.Cooldown();
+		tw = new dn.Tweenie(Const.FPS);
 
 		pathPreview = new flash.display.Sprite();
-		Game.ME.sdm.add(pathPreview, Const.DP_BG);
+		Game.ME.scroller.add(pathPreview, Const.DP_BG);
 		pathPreview.blendMode = ADD;
 		pathPreview.alpha = 0.6;
 		//pathPreview.filters = [
 			//new flash.filters.GlowFilter(0x0D108E,1, 16,16,2),
 		//];
 
-		spr = new mt.deepnight.slb.BSprite( Assets.tiles );
-		Game.ME.sdm.add(spr, Const.DP_ENTITY);
+		spr = new mt.deepnight.slb.HSprite( Assets.tiles );
+		Game.ME.scroller.add(spr, Const.DP_ENTITY);
 		spr.setCenterRatio(0.5,1);
 		spr.filters = [
 			new flash.filters.GlowFilter(0x1A122C,0.8, 2,2,6),
 		];
 
 		shadow = Assets.tiles.get("shadow", 0.5,0.5);
-		Game.ME.sdm.add(shadow, Const.DP_BG);
+		Game.ME.scroller.add(shadow, Const.DP_BG);
 		shadow.alpha = 0.6;
 	}
 

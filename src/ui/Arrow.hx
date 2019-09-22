@@ -3,7 +3,7 @@ package ui;
 class Arrow extends dn.Process {
 	public static var CURRENT : Arrow;
 
-	var spr 		: mt.deepnight.slb.BSprite;
+	var spr 		: mt.deepnight.slb.HSprite;
 	var active		: Bool;
 	var x			: Float;
 	var y			: Float;
@@ -19,7 +19,7 @@ class Arrow extends dn.Process {
 		cy = Std.int(cy);
 
 		active = false;
-		Game.ME.sdm.add(root, Const.DP_UI);
+		Game.ME.scroller.add(root, Const.DP_UI);
 
 		spr = Assets.tiles.get("arrow", root);
 		spr.setCenterRatio(0.5,1);

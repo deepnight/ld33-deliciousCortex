@@ -1,11 +1,11 @@
 package ui;
 
 class Title extends dn.Process {
-	var bg			: BSprite;
+	var bg			: HSprite;
 	public function new(str:String) {
 		super(Game.ME);
 
-		Game.ME.buffer.dm.add(root, Const.DP_TOP);
+		Game.ME.buffer.add(root, Const.DP_TOP);
 
 		bg = Assets.tiles.get("place",root);
 

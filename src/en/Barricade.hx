@@ -5,7 +5,7 @@ class Barricade extends Entity {
 
 	var wid			: Int;
 	var hei			: Int;
-	var crates		: Array<BSprite>;
+	var crates		: Array<HSprite>;
 
 	public function new(x,y) {
 		super(x,y);
@@ -30,7 +30,7 @@ class Barricade extends Entity {
 
 		//var d = Std.random(2)*2-1;
 		//var s = Assets.tiles.getRandom("tinyCrate");
-		//Game.ME.sdm.add(s, Const.DP_BG);
+		//Game.ME.scroller.add(s, Const.DP_BG);
 		//crates.push(s);
 		//s.setCenter(0.5,0.5);
 		//s.x = xx-Const.GRID*d;
@@ -38,7 +38,7 @@ class Barricade extends Entity {
 		//if( Std.random(100)<30 ) {
 			//d*=-1;
 			//var s = Assets.tiles.getRandom("tinyCrate");
-			//Game.ME.sdm.add(s, Const.DP_BG);
+			//Game.ME.scroller.add(s, Const.DP_BG);
 			//crates.push(s);
 			//s.setCenter(0.5,0.5);
 			//s.x = xx + (Const.GRID-rnd(2,6))*d;

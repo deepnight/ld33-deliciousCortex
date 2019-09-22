@@ -84,7 +84,7 @@ class Fx extends dn.Process {
 	}
 
 	function sendToBg(p:FParticle) {
-		Game.ME.sdm.add(p, Const.DP_BG);
+		Game.ME.scroller.add(p, Const.DP_BG);
 	}
 
 	public function death(e:Entity) {

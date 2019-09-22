@@ -2,14 +2,14 @@ package en;
 
 class Zombie extends Entity {
 	public static var ALL : Array<Zombie> = [];
-	public var selection	: BSprite;
+	public var selection	: HSprite;
 
 	public function new(x,y) {
 		super(x,y);
 		ALL.push(this);
 
 		selection = Assets.tiles.get("selection", 0.5,0.5);
-		Game.ME.sdm.add(selection, Const.DP_BG);
+		Game.ME.scroller.add(selection, Const.DP_BG);
 		selection.filters = [
 			new flash.filters.GlowFilter(0x2E268C,0.9, 8,8,4),
 		];
